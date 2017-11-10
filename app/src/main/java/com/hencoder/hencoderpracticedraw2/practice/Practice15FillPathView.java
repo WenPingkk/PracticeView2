@@ -52,6 +52,7 @@ public class Practice15FillPathView extends View {
 
         canvas.save();
         canvas.translate(500, 0);
+        pathPaint.getFillPath(path,path1);
         canvas.drawPath(path1, pathPaint);
         canvas.restore();
 
@@ -64,6 +65,7 @@ public class Practice15FillPathView extends View {
 
         canvas.save();
         canvas.translate(500, 200);
+        pathPaint.getFillPath(path,path2);
         canvas.drawPath(path2, pathPaint);
         canvas.restore();
 
@@ -76,7 +78,9 @@ public class Practice15FillPathView extends View {
 
         canvas.save();
         canvas.translate(500, 400);
-        canvas.drawPath(path3, pathPaint);
+        Path pathLast = new Path();
+        pathPaint.getFillPath(path,pathLast);
+        canvas.drawPath(pathLast, pathPaint);
         canvas.restore();
     }
 }
